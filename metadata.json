@@ -1,0 +1,6 @@
+{
+  "name": "Xpert Radón - Optimizador de Rutas v02",
+  "description": "Una aplicación multi-paso para planificar y optimizar rutas de trabajo para técnicos, considerando horarios, carga de trabajo y ubicaciones geográficas.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
