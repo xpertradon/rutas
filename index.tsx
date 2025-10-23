@@ -123,7 +123,7 @@ const App = () => {
     
     // --- Handlers & Logic ---
     const geocodeAddress = async (address: string): Promise<{ lat: number; lon: number }> => {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
         const prompt = `
             Actúa como un API de geocodificación de ultra-precisión. Tu única tarea es devolver las coordenadas para la dirección proporcionada.
             Utiliza Google Search para encontrar la ubicación más precisa posible.
@@ -267,7 +267,7 @@ const App = () => {
                 required: ['centros']
             };
 
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+            const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
             const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
                 contents: prompt,
@@ -433,7 +433,7 @@ const App = () => {
         };
 
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+            const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
             const response = await ai.models.generateContent({
               model: 'gemini-2.5-flash',
               contents: prompt,
